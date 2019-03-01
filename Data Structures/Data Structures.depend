@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1551463836 source:d:\data structures\main.cpp
+	<iostream>
+	"Stack.h"
+
+1551463877 d:\data structures\include\stack.h
+	"Element.h"
+
+1551464344 d:\data structures\include\element.h
+	<string>
+
+1551464482 source:d:\data structures\src\element.cpp
+	"Element.h"
+
+1551464505 source:d:\data structures\src\stack.cpp
+	"Stack.h"
+
+1551464497 source:d:\data structures\src\queue.cpp
+	"Queue.h"
+
+1551464226 d:\data structures\include\queue.h
+	"Element.h"
+
