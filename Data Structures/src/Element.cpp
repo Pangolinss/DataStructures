@@ -3,7 +3,7 @@
 Element::Element()
 {
     value = "\0";
-    next = NULL;
+    next = nullptr;
 }
 void Element::setValue (std::string _val)
 {
@@ -20,5 +20,10 @@ Element* Element::getNext()
 Element::Element(std::string _val, Element* _ele)
 {
     value = _val;
+    next = _ele;
+}
+
+void Element::point(Element* _ele)
+{
     next = _ele;
 }
