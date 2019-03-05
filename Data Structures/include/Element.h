@@ -15,6 +15,7 @@ class Element
 
         Element* getNext();
         Element(std::string, Element*);
+        void point(Element*);
 };
 
 #endif // ELEMENT_H
