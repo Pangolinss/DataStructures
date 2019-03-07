@@ -1,23 +1,30 @@
 # depslib dependency file v1.0
-1551463836 source:d:\data structures\main.cpp
+1551984023 source:d:\data structures\main.cpp
 	<iostream>
-	"Stack.h"
+	"LinkList.h"
 
-1551463877 d:\data structures\include\stack.h
+1551807104 d:\data structures\include\stack.h
 	"Element.h"
 
-1551464344 d:\data structures\include\element.h
+1551983983 d:\data structures\include\element.h
 	<string>
+	<iostream>
 
-1551464482 source:d:\data structures\src\element.cpp
+1551980729 source:d:\data structures\src\element.cpp
 	"Element.h"
 
-1551464505 source:d:\data structures\src\stack.cpp
+1551808114 source:d:\data structures\src\stack.cpp
 	"Stack.h"
 
-1551464497 source:d:\data structures\src\queue.cpp
+1551899655 source:d:\data structures\src\queue.cpp
 	"Queue.h"
 
-1551464226 d:\data structures\include\queue.h
+1551807544 d:\data structures\include\queue.h
+	"Element.h"
+
+1551984085 source:d:\data structures\src\linklist.cpp
+	"LinkList.h"
+
+1551984039 d:\data structures\include\linklist.h
 	"Element.h"
 

@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="D:/Data Structures/include" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,6 +34,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/Element.h" />
+		<Unit filename="include/LinkList.h" />
+		<Unit filename="include/Queue.h" />
+		<Unit filename="include/Stack.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Element.cpp" />
+		<Unit filename="src/LinkList.cpp" />
+		<Unit filename="src/Queue.cpp" />
+		<Unit filename="src/Stack.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

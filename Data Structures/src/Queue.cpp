@@ -12,7 +12,7 @@ void Queue::enqueue(std::string _val)
     newLast = new Element(_val, nullptr);
     if (last != nullptr)
     {
-        last->point(newLast);
+        last->point(newLast, nullptr);
     }
     if (first == nullptr)
     {
