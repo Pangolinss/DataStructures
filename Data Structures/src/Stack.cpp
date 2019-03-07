@@ -2,7 +2,7 @@
 
 Stack::Stack()
 {
-    top = NULL;
+    top = nullptr;
 }
 
 void Stack::push(std::string _val)
@@ -18,7 +18,7 @@ std::string Stack::peek()
 }
 std::string Stack::pop()
 {
-    if (top != NULL)
+    if (top != nullptr)
     {
         std::string str = top->getValue();
         top = top->getNext();
