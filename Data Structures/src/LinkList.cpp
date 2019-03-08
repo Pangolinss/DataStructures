@@ -4,10 +4,9 @@ LinkList::LinkList()
 {
     first = nullptr;
     last = nullptr;
-    size = 0;
 }
 
-int LinkList::add(std::string _str)
+void LinkList::add(std::string _str)
 {
     Element* ele;
     ele = new Element(_str, last, nullptr);
@@ -20,21 +19,23 @@ int LinkList::add(std::string _str)
         first = ele;
     }
     last = ele;
-    size++;
-    return size;
+    return;
 }
 
-int LinkList::add(Element* ele)
+void LinkList::add(Element* ele)
 {
     ele->point(last, nullptr);
     last = ele;
-    size++;
-    return size;
+}
+
+void LinkList::linkElements(Element* ele1, Element* ele2)
+{
+    ele1->setBefore(ele2);
+    ele2->setNext(ele1);
 }
 
 Element* LinkList::getFirst()
 {
-    std::cout<<first->getValue()<<std::endl;
     return first;
 }
 
@@ -50,35 +51,37 @@ Element* LinkList::lfind(int num)
     int i = 0;
     while (i<num && ele != nullptr)
     {
-        ele = ele->getNext();
+        ele = ele->getBefore();
         i++;
     }
-    std::cout<<ele->getValue()<<std::endl;
     return ele;
 }
 
 std::string LinkList::lremove(Element* ele)
 {
     std::string val = ele->getValue();
-    if (first != nullptr && last != nullptr)
+    std::cout<<"This is the value im removing "<<val<<std::endl;
+    if (first != nullptr && last != nullptr && ele != nullptr)
     {
         if (ele->getNext() != nullptr && ele->getBefore() != nullptr)
         {
             ele->getBefore()->setNext(ele->getNext());
             ele->getNext()->setBefore(ele->getBefore());
+            std::cout<<"not first or last"<<std::endl;
         }
         else if (ele == first)
         {
             first = ele->getBefore();
             ele->getBefore()->setNext(nullptr);
+            std::cout<<"first"<<std::endl;
         }
         else if (ele == last)
         {
             last = ele->getNext();
             ele->setNext(nullptr);
+            std::cout<<"last"<<std::endl;
         }
         ele->point(nullptr, nullptr);
-        size--;
         return val;
     }
     else

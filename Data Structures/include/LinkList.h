@@ -7,8 +7,9 @@ class LinkList
 {
     public:
         LinkList();
-        int add(std::string);
-        int add(Element*);
+        void add(std::string);
+        void add(Element*);
+        void linkElements(Element*, Element*);
         Element* getFirst();
         Element* getLast();
         Element* lfind(std::string);
@@ -20,7 +21,6 @@ class LinkList
     private:
         Element* first;
         Element* last;
-        int size;
 };
 
 #endif // LINKLIST_H
