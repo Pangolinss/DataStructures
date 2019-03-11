@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1551984023 source:d:\data structures\main.cpp
+1552075426 source:d:\data structures\main.cpp
 	<iostream>
 	"LinkList.h"
 
 1551807104 d:\data structures\include\stack.h
 	"Element.h"
 
-1551983983 d:\data structures\include\element.h
+1552073318 d:\data structures\include\element.h
 	<string>
 	<iostream>
 
-1551980729 source:d:\data structures\src\element.cpp
+1552073240 source:d:\data structures\src\element.cpp
 	"Element.h"
 
 1551808114 source:d:\data structures\src\stack.cpp
@@ -22,9 +22,38 @@
 1551807544 d:\data structures\include\queue.h
 	"Element.h"
 
-1551984085 source:d:\data structures\src\linklist.cpp
+1552075256 source:d:\data structures\src\linklist.cpp
 	"LinkList.h"
 
-1551984039 d:\data structures\include\linklist.h
+1552073868 d:\data structures\include\linklist.h
+	"Element.h"
+
+1552270565 source:c:\c++\datastructures-pangolinss-patch-4\data structures\main.cpp
+	<iostream>
+	"LinkList.h"
+
+1552271013 c:\c++\datastructures-pangolinss-patch-4\data structures\include\linklist.h
+	"Element.h"
+
+1552255344 c:\c++\datastructures-pangolinss-patch-4\data structures\include\element.h
+	<string>
+	<iostream>
+
+1552256737 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\element.cpp
+	"Element.h"
+
+1552273485 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\linklist.cpp
+	"LinkList.h"
+
+1552177092 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\queue.cpp
+	"Queue.h"
+
+1552177092 c:\c++\datastructures-pangolinss-patch-4\data structures\include\queue.h
+	"Element.h"
+
+1552177092 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\stack.cpp
+	"Stack.h"
+
+1552177092 c:\c++\datastructures-pangolinss-patch-4\data structures\include\stack.h
 	"Element.h"
 
