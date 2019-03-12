@@ -1,15 +1,17 @@
 #include "Queue.h"
 
-Queue::Queue()
+template <typename T>
+Queue<T>::Queue()
 {
     first = nullptr;
     last = nullptr;
 }
 
-void Queue::enqueue(std::string _val)
+template <typename T>
+void Queue<T>::enqueue(std::string _val)
 {
-    Element* newLast;
-    newLast = new Element(_val, nullptr);
+    Element<T>* newLast;
+    newLast = new Element<T>(_val, nullptr);
     if (last != nullptr)
     {
         last->point(newLast, nullptr);
@@ -21,7 +23,8 @@ void Queue::enqueue(std::string _val)
     last = newLast;
 }
 
-std::string Queue::dequeue()
+template <typename T>
+std::string Queue<T>::dequeue()
 {
     std::string ret_val = "\0";
     if (first != nullptr)
@@ -32,7 +35,8 @@ std::string Queue::dequeue()
     return ret_val;
 }
 
-Queue::~Queue()
+template <typename T>
+Queue<T>::~Queue()
 {
     //dtor
 }

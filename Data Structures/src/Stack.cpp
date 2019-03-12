@@ -1,22 +1,27 @@
 #include "Stack.h"
 
-Stack::Stack()
+template<typename T>
+Stack<T>::Stack()
 {
     top = nullptr;
 }
 
-void Stack::push(std::string _val)
+template<typename T>
+void Stack<T>::push(std::string _val)
 {
-    Element* newTop;
-    newTop = new Element (_val, top);
+    Element<T>* newTop;
+    newTop = new Element<T> (_val, top);
     top = newTop;
 }
 
-std::string Stack::peek()
+template<typename T>
+std::string Stack<T>::peek()
 {
     return top->getValue();
 }
-std::string Stack::pop()
+
+template<typename T>
+std::string Stack<T>::pop()
 {
     if (top != nullptr)
     {

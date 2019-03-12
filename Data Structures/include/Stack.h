@@ -2,10 +2,11 @@
 #define STACK_H
 #include"Element.h"
 
+template<typename T>
 class Stack
 {
     private:
-        Element* top;
+        Element<T>* top;
     public:
         Stack();
         void push(std::string);

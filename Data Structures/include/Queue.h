@@ -2,12 +2,12 @@
 #define QUEUE_H
 #include"Element.h"
 
-
+template<typename T>
 class Queue
 {
     private:
-        Element* first;
-        Element* last;
+        Element<T>* first;
+        Element<T>* last;
     public:
         Queue();
         virtual ~Queue();
