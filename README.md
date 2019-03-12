@@ -1,8 +1,12 @@
 # DataStructures
 Code for my data structures
 
-Changelog
+Changelog 
+
+
 2019-03-11
+
+
 -Link is a useless file, not needed.
 
 -Templated "Element" and "LinkList", but not "stack" and "queue".
