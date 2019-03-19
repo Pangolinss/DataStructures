@@ -1,64 +1,92 @@
 #include "Element.h"
 
-Element::Element()
+template <typename T>
+Element<T>::Element()
 {
-    value = "\0";
+    value = new T;
     next = nullptr;
     before = nullptr;
 }
-void Element::setValue (std::string _val)
+
+template <typename T>
+void Element<T>::setValue (T _val)
 {
-    value = _val;
+    *value = _val;
 }
-void Element::setBefore(Element* ele)
+
+template <typename T>
+void Element<T>::setBefore(Element<T>* ele)
 {
     before = ele;
 }
 
-void Element::setNext(Element* ele)
+template <typename T>
+void Element<T>::setNext(Element<T>* ele)
 {
     next = ele;
 }
 
-std::string Element::getValue() const
+template <typename T>
+T Element<T>::getValue() const
 {
-    return (this==nullptr) ? ("Value of NULL") : (value);
+    if (this == nullptr)
+    {
+        assert(false && "Element::getValue(): calling getValue() on a nullpntr");
+    }
+    else
+    {
+        return *value;
+    }
 }
-Element* Element::getNext() const
+
+template <typename T>
+Element<T>* Element<T>::getNext() const
 {
     return (this==nullptr) ? (nullptr) : (next);
 }
-Element* Element::getBefore() const
+
+template <typename T>
+Element<T>* Element<T>::getBefore() const
 {
     return (this==nullptr) ? (nullptr) : (before);
 }
-Element::Element(std::string _val, Element* _ele)
+
+template <typename T>
+Element<T>::Element(T _val, Element<T>* _ele)
 {
-    value = _val;
+    value = new T;
+    *value = _val;
     next = _ele;
 }
-Element::Element(std::string _val, Element* ele1, Element* ele2)
+
+template <typename T>
+Element<T>::Element(T _val, Element<T>* ele1, Element<T>* ele2)
 {
-    value = _val;
+    value = new T;
+    *value = _val;
     next = ele1;
     before = ele2;
 }
-void Element::point(Element* ele1, Element* ele2)
+
+template <typename T>
+void Element<T>::point(Element<T>* ele1, Element<T>* ele2)
 {
     next = ele1;
     before = ele2;
 }
 
-void Element::operator=(Element other)
+template <typename T>
+void Element<T>::operator=(Element<T> other)
 {
     next = other.getNext();
     before = other.getBefore();
-    value = other.getValue();
+    *value = other.getValue();
 }
 
-bool Element::operator==(Element other)
+template <typename T>
+bool Element<T>::operator==(Element<T> other)
 {
-    if (next == other.getNext() && before == other.getBefore() && value == other.getValue())
+    if (next == other.getNext() && before == other.getBefore() && *value == other.getValue())
     {
         return true;
     }
@@ -69,11 +97,12 @@ bool Element::operator==(Element other)
     return false;
 }
 
-void Element::eCopyNext(Element* ele, Element* _first, Element* _last)
+template <typename T>
+void Element<T>::eCopyNext(Element<T>* ele, Element<T>* _first, Element<T>* _last)
 {
-    Element* eleNext;
-    eleNext = new Element("\0", nullptr, nullptr);
-    ele = new Element("\0", nullptr, nullptr);
+    Element<T>* eleNext;
+    eleNext = new Element<T>(0, nullptr, nullptr);
+    ele = new Element<T>(0, nullptr, nullptr);
     *ele = *_last;
     if (_last->getBefore() == nullptr)
     {
@@ -93,5 +122,15 @@ void Element::eCopyNext(Element* ele, Element* _first, Element* _last)
     }
 }
 
+template<typename T>
+Element<T>::~Element<T>()
+{
+    //dtor
+}
 
-
+template class Element <std::string>;
+template class Element <int>;
+template class Element <char>;
+template class Element <bool>;
+template class Element <double>;
+template class Element <int*>;

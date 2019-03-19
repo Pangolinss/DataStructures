@@ -1,15 +1,17 @@
 #include "LinkList.h"
 
-LinkList::LinkList()
+template<typename T>
+LinkList<T>::LinkList()
 {
     first = nullptr;
     last = nullptr;
 }
 
-void LinkList::append(std::string _str)
+template<typename T>
+void LinkList<T>::append(T _str)
 {
-    Element* ele;
-    ele = new Element(_str, last, nullptr);
+    Element<T>* ele;
+    ele = new Element<T>(_str, last, nullptr);
     if (last != nullptr)
     {
         last->setBefore(ele);
@@ -22,7 +24,8 @@ void LinkList::append(std::string _str)
     return;
 }
 
-void LinkList::append(Element* ele)
+template<typename T>
+void LinkList<T>::append(Element<T>* ele)
 {
     ele->point(last, nullptr);
     if (last != nullptr)
@@ -37,10 +40,11 @@ void LinkList::append(Element* ele)
     return;
 }
 
-void LinkList::add(std::string str, Element* inFrontOfThis)
+template<typename T>
+void LinkList<T>::add(T str, Element<T>* inFrontOfThis)
 {
-    Element* ele;
-    ele = new Element(str, inFrontOfThis->getNext(), inFrontOfThis);
+    Element<T>* ele;
+    ele = new Element<T>(str, inFrontOfThis->getNext(), inFrontOfThis);
     if (inFrontOfThis != nullptr)
     {
         if (inFrontOfThis == first)
@@ -61,25 +65,29 @@ void LinkList::add(std::string str, Element* inFrontOfThis)
     }
 }
 
-void LinkList::linkElements(Element* ele1, Element* ele2)
+template<typename T>
+void LinkList<T>::linkElements(Element<T>* ele1, Element<T>* ele2)
 {
     ele1->setBefore(ele2);
     ele2->setNext(ele1);
 }
 
-Element* LinkList::getFirst() const
+template<typename T>
+Element<T>* LinkList<T>::getFirst() const
 {
     return first;
 }
 
-Element* LinkList::getLast() const
+template<typename T>
+Element<T>* LinkList<T>::getLast() const
 {
     return last;
 }
 
-Element* LinkList::lfind(int num)
+template<typename T>
+Element<T>* LinkList<T>::lfindi(int num)
 {
-    Element* ele;
+    Element<T>* ele;
     ele = first;
     int i = 0;
     while (i<num && ele != nullptr)
@@ -94,11 +102,12 @@ Element* LinkList::lfind(int num)
     return ele;
 }
 
-std::string LinkList::lremove(Element* ele)
+template<typename T>
+T LinkList<T>::lremove(Element<T>* ele)
 {
     if (ele != nullptr)
     {
-        std::string val = ele->getValue();
+        T val = ele->getValue();
         if (first != nullptr && last != nullptr)
         {
             if (ele == first && ele == last)
@@ -127,16 +136,17 @@ std::string LinkList::lremove(Element* ele)
     }
     else
     {
-        return "\0";
+        return 0;
     }
-    return "\0";
+    return 0;
 }
 
-void LinkList::operator=(LinkList other)
+template<typename T>
+void LinkList<T>::operator=(LinkList<T> other)
 {
-    Element* point;
-    Element* _list = new Element;
-    Element* actualList;
+    Element<T>* point;
+    Element<T>* _list = new Element<T>;
+    Element<T>* actualList;
 
     point = other.getLast();
 
@@ -145,7 +155,7 @@ void LinkList::operator=(LinkList other)
 
 
     point = point->getNext();
-    _list = new Element;
+    _list = new Element<T>;
 
     actualList->setNext(_list);
     actualList->setBefore(nullptr);
@@ -159,7 +169,7 @@ void LinkList::operator=(LinkList other)
         actualList = _list;
 
         point = point->getNext();
-        _list = new Element;
+        _list = new Element<T>;
 
         actualList->setNext(_list);
         _list->setBefore(actualList);
@@ -168,9 +178,10 @@ void LinkList::operator=(LinkList other)
     first = _list;
 }
 
-Element* LinkList::operator[](int num)
+template<typename T>
+Element<T>* LinkList<T>::operator[](int num)
 {
-    Element* ele;
+    Element<T>* ele;
     ele = first;
     int i = 0;
     while (i<num && ele != nullptr)
@@ -185,7 +196,15 @@ Element* LinkList::operator[](int num)
     return ele;
 }
 
-LinkList::~LinkList()
+template<typename T>
+LinkList<T>::~LinkList<T>()
 {
     //dtor
 }
+
+template class LinkList <std::string>;
+template class LinkList <int>;
+template class LinkList <char>;
+template class LinkList <bool>;
+template class LinkList <double>;
+template class LinkList <int*>;

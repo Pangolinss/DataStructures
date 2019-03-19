@@ -1,31 +1,37 @@
 #include "Stack.h"
 
-Stack::Stack()
+template<typename T>
+Stack<T>::Stack()
 {
     top = nullptr;
 }
 
-void Stack::push(std::string _val)
+template<typename T>
+void Stack<T>::push(T _val)
 {
-    Element* newTop;
-    newTop = new Element (_val, top);
+    Element<T>* newTop;
+    newTop = new Element<T> (_val, top);
     top = newTop;
 }
 
-std::string Stack::peek()
+template<typename T>
+T Stack<T>::peek()
 {
     return top->getValue();
 }
-std::string Stack::pop()
+
+template<typename T>
+T Stack<T>::pop()
 {
     if (top != nullptr)
     {
-        std::string str = top->getValue();
+        T str = top->getValue();
         top = top->getNext();
         return str;
     }
     else
     {
-        return "\0";
+        assert(false && "Stack::pop() cannot return nullpntr");
+        return 0;
     }
 }

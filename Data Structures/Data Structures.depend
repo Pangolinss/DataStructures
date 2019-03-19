@@ -28,32 +28,32 @@
 1552073868 d:\data structures\include\linklist.h
 	"Element.h"
 
-1552270565 source:c:\c++\datastructures-pangolinss-patch-4\data structures\main.cpp
+1552437677 source:c:\c++\datastructures-pangolinss-patch-4\data structures\main.cpp
 	<iostream>
 	"LinkList.h"
 
-1552271013 c:\c++\datastructures-pangolinss-patch-4\data structures\include\linklist.h
+1552437814 c:\c++\datastructures-pangolinss-patch-4\data structures\include\linklist.h
 	"Element.h"
 
-1552255344 c:\c++\datastructures-pangolinss-patch-4\data structures\include\element.h
+1552424183 c:\c++\datastructures-pangolinss-patch-4\data structures\include\element.h
 	<string>
-	<iostream>
+	<assert.h>
 
-1552256737 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\element.cpp
+1552424916 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\element.cpp
 	"Element.h"
 
-1552273485 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\linklist.cpp
+1552437817 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\linklist.cpp
 	"LinkList.h"
 
-1552177092 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\queue.cpp
+1552440237 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\queue.cpp
 	"Queue.h"
 
-1552177092 c:\c++\datastructures-pangolinss-patch-4\data structures\include\queue.h
+1552440146 c:\c++\datastructures-pangolinss-patch-4\data structures\include\queue.h
 	"Element.h"
 
-1552177092 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\stack.cpp
+1552316123 source:c:\c++\datastructures-pangolinss-patch-4\data structures\src\stack.cpp
 	"Stack.h"
 
-1552177092 c:\c++\datastructures-pangolinss-patch-4\data structures\include\stack.h
+1552315871 c:\c++\datastructures-pangolinss-patch-4\data structures\include\stack.h
 	"Element.h"
 
