@@ -1,10 +1,6 @@
 # DataStructures
 Code for my data structures
 
-
-# DataStructures
-Code for my data structures
-
 Changelog 
 
 2019-03-18
