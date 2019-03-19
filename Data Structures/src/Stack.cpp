@@ -7,7 +7,7 @@ Stack<T>::Stack()
 }
 
 template<typename T>
-void Stack<T>::push(std::string _val)
+void Stack<T>::push(T _val)
 {
     Element<T>* newTop;
     newTop = new Element<T> (_val, top);
@@ -15,22 +15,23 @@ void Stack<T>::push(std::string _val)
 }
 
 template<typename T>
-std::string Stack<T>::peek()
+T Stack<T>::peek()
 {
     return top->getValue();
 }
 
 template<typename T>
-std::string Stack<T>::pop()
+T Stack<T>::pop()
 {
     if (top != nullptr)
     {
-        std::string str = top->getValue();
+        T str = top->getValue();
         top = top->getNext();
         return str;
     }
     else
     {
-        return "\0";
+        assert(false && "Stack::pop() cannot return nullpntr");
+        return 0;
     }
 }

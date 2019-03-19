@@ -9,9 +9,9 @@ class Stack
         Element<T>* top;
     public:
         Stack();
-        void push(std::string);
-        std::string peek();
-        std::string pop();
+        void push(T);
+        T peek();
+        T pop();
 };
 
 #endif // STACK_H

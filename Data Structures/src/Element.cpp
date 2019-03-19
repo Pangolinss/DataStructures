@@ -31,8 +31,7 @@ T Element<T>::getValue() const
 {
     if (this == nullptr)
     {
-        throw ("Element::getValue(): value of a nullpntr");
-        return 0;
+        assert(false && "Element::getValue(): calling getValue() on a nullpntr");
     }
     else
     {
@@ -134,5 +133,4 @@ template class Element <int>;
 template class Element <char>;
 template class Element <bool>;
 template class Element <double>;
-
-
+template class Element <int*>;

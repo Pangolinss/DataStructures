@@ -8,7 +8,7 @@ Queue<T>::Queue()
 }
 
 template <typename T>
-void Queue<T>::enqueue(std::string _val)
+void Queue<T>::enqueue(T _val)
 {
     Element<T>* newLast;
     newLast = new Element<T>(_val, nullptr);
@@ -24,13 +24,17 @@ void Queue<T>::enqueue(std::string _val)
 }
 
 template <typename T>
-std::string Queue<T>::dequeue()
+T Queue<T>::dequeue()
 {
-    std::string ret_val = "\0";
+    T ret_val;
     if (first != nullptr)
     {
         ret_val = first->getValue();
         first = first->getNext();
+    }
+    else
+    {
+        assert(false && "Queue::dequeue() cannot value of a nullpntr");
     }
     return ret_val;
 }

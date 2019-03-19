@@ -12,8 +12,8 @@ class Queue
         Queue();
         virtual ~Queue();
 
-        void enqueue(std::string);
-        std::string dequeue();
+        void enqueue(T);
+        T dequeue();
 };
 
 #endif // QUEUE_H

@@ -1,7 +1,7 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 #include<string>
-#include<iostream>
+#include<assert.h>
 
 template<typename T>
 class Element

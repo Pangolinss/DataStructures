@@ -41,4 +41,5 @@ class LinkList
         Element<T>* last;
 };
 
+
 #endif // LINKLIST_H
