@@ -2,18 +2,18 @@
 #define QUEUE_H
 #include"Element.h"
 
-
+template<typename T>
 class Queue
 {
     private:
-        Element* first;
-        Element* last;
+        Element<T>* first;
+        Element<T>* last;
     public:
         Queue();
         virtual ~Queue();
 
-        void enqueue(std::string);
-        std::string dequeue();
+        void enqueue(T);
+        T dequeue();
 };
 
 #endif // QUEUE_H

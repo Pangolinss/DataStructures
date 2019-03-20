@@ -1,29 +1,31 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 #include<string>
-#include<iostream>
+#include<assert.h>
 
+class Node;
 
+template<typename T>
 class Element
 {
     private:
         Element* next;
         Element* before;
-        std::string value;
+        T* value;
     public:
         Element();//Default constructor
 
         //Get and Set functions
-        void setValue (std::string);
+        void setValue (T);
         void setNext(Element*);
         void setBefore(Element*);
-        std::string getValue() const;
+        T getValue() const;
         Element* getNext() const;
         Element* getBefore() const;
 
         //Other constructors, usually don't use them
-        Element(std::string, Element*);
-        Element(std::string, Element*, Element*);
+        Element(T, Element*);
+        Element(T, Element*, Element*);
 
         //Basically a set function, points the elements to other things
         void point(Element*, Element*);
@@ -33,7 +35,9 @@ class Element
         bool operator==(Element);
 
         //Functions that don't work
-        void eCopyNext(Element*, Element*, Element*)//An attempt to recursively copy things, dosen't work use the LinkList assignment operator
+        void eCopyNext(Element*, Element*, Element*);//An attempt to recursively copy things, dosen't work use the LinkList assignment operator
+
+        virtual ~Element();//Default destructor
 };
 
 #endif // ELEMENT_H

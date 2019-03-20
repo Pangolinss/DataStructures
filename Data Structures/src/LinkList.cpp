@@ -1,4 +1,5 @@
 #include "LinkList.h"
+class Node;
 
 template<typename T>
 LinkList<T>::LinkList()
@@ -208,3 +209,4 @@ template class LinkList <char>;
 template class LinkList <bool>;
 template class LinkList <double>;
 template class LinkList <int*>;
+template class LinkList <Node*>;

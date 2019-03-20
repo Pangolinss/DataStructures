@@ -35,12 +35,16 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/Element.h" />
+		<Unit filename="include/Graph.h" />
 		<Unit filename="include/LinkList.h" />
+		<Unit filename="include/Node.h" />
 		<Unit filename="include/Queue.h" />
 		<Unit filename="include/Stack.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Element.cpp" />
+		<Unit filename="src/Graph.cpp" />
 		<Unit filename="src/LinkList.cpp" />
+		<Unit filename="src/Node.cpp" />
 		<Unit filename="src/Queue.cpp" />
 		<Unit filename="src/Stack.cpp" />
 		<Extensions>
