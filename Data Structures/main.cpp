@@ -1,28 +1,14 @@
 #include<iostream>
-#include"LinkList.h"
+#include"Graph.h"
 using namespace std;
 
 int main()
 {
-    string input;
-    LinkList<string> llist;
-    LinkList<string> newlist;
-    for (int i = 0; i<5; i++)
-    {
-        cin>>input;
-        llist.append(input);
-    }
-
-    for (int i = 0; i<5; i++)
-    {
-        cout<<llist[i]->getValue()<<endl;
-    }
-    newlist = llist;
-    for (int i = 0; i<5; i++)
-    {
-        cout<<newlist[i]->getValue()<<endl;
-    }
-
+    Graph graph;
+    int arr[] = {1,2,3,4};
+    Node* node;
+    node = new Node(arr, 4);
+    graph.addNode(node);
 
     return 0;
 }

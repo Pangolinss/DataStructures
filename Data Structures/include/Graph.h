@@ -8,6 +8,9 @@ class Graph
         Graph();
         void setOrigin(Node*);
         void addNode(Node*, Node*, int*);
+        void addNode(Node*);
+        void getNode(int);
+        int* getNodeConMag(Node*, Node*);
         virtual ~Graph();
 
     private:

@@ -1,31 +1,31 @@
 # depslib dependency file v1.0
-1552075426 source:d:\data structures\main.cpp
+1553108572 source:d:\data structures\main.cpp
 	<iostream>
-	"LinkList.h"
+	"Graph.h"
 
-1551807104 d:\data structures\include\stack.h
+1553105218 d:\data structures\include\stack.h
 	"Element.h"
 
-1552073318 d:\data structures\include\element.h
+1553105217 d:\data structures\include\element.h
 	<string>
-	<iostream>
+	<assert.h>
 
-1552073240 source:d:\data structures\src\element.cpp
+1553105219 source:d:\data structures\src\element.cpp
 	"Element.h"
 
-1551808114 source:d:\data structures\src\stack.cpp
+1553105219 source:d:\data structures\src\stack.cpp
 	"Stack.h"
 
-1551899655 source:d:\data structures\src\queue.cpp
+1553105219 source:d:\data structures\src\queue.cpp
 	"Queue.h"
 
-1551807544 d:\data structures\include\queue.h
+1553105218 d:\data structures\include\queue.h
 	"Element.h"
 
-1552075256 source:d:\data structures\src\linklist.cpp
+1553105219 source:d:\data structures\src\linklist.cpp
 	"LinkList.h"
 
-1552073868 d:\data structures\include\linklist.h
+1553105218 d:\data structures\include\linklist.h
 	"Element.h"
 
 1552437677 source:c:\c++\datastructures-pangolinss-patch-4\data structures\main.cpp
@@ -67,4 +67,16 @@
 
 1553038612 c:\c++\datastructures-pangolinss-patch-4\data structures\include\node.h
 	"LinkList.h"
+
+1553108184 source:d:\data structures\src\graph.cpp
+	"Graph.h"
+
+1553108605 d:\data structures\include\graph.h
+	"Node.h"
+
+1553105218 d:\data structures\include\node.h
+	"LinkList.h"
+
+1553105219 source:d:\data structures\src\node.cpp
+	"Node.h"
 
