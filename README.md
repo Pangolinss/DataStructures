@@ -3,6 +3,12 @@ Code for my data structures
 
 Changelog 
 
+2019-03-19
+
+-Added Nodes and Graphs
+
+
+
 2019-03-18
 
 -Templated everything, also allowed pointers to work 
